@@ -5,35 +5,32 @@ using UnityEngine;
 public class Spown_Bullet : MonoBehaviour
 {
     [SerializeField] GameObject _bulatPrefabs;
-    [SerializeField] GameObject[] _spowPoint;
-    [SerializeField] float minInterval, maxInterval;
-    int randomIndex;
+    [SerializeField] GameObject[] _spownPoint;
 
+    [SerializeField] float min, max;
+    int randomIndex;
 
     // Start is called before the first frame update
     void Start()
     {
-        Invoke("InstantiateObject", Random.Range(minInterval, maxInterval));
+        Invoke("Instansiate", Random.Range(min, max));
     }
 
     // Update is called once per frame
     void Update()
     {
-        randomIndex = Random.Range(0, _spowPoint.Length);
-
-       
+        randomIndex = Random.Range(0, _spownPoint.Length);
     }
 
-    void InstantiateObject()
+    private void Instansiate()
     {
-        Instantiate(_bulatPrefabs, _spowPoint[randomIndex].transform.position, _spowPoint[randomIndex].transform.rotation);
-
-        Invoke("InstantiateObject", Random.Range(minInterval, maxInterval));
-        GameObject bulat = GameObject.FindWithTag("Bulat");
-        if (bulat != null)
+        Instantiate(_bulatPrefabs, _spownPoint[randomIndex].transform.position, _spownPoint[randomIndex].transform.rotation);
+        Invoke("Instansiate", Random.Range(min, max));
+        GameObject Bulat = GameObject.FindWithTag("Bulat");
+        if(Bulat != null)
         {
-            Destroy(bulat, 3f);
+            Destroy(Bulat, 3f);
         }
-
     }
+
 }

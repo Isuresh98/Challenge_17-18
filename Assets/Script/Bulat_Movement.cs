@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class Bulat_Movement : MonoBehaviour
 {
-    [SerializeField]float speed = 5f;
 
-
+    [SerializeField]  float _speed=5f;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,7 +16,7 @@ public class Bulat_Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position += transform.right * speed * Time.deltaTime;
+        transform.position += transform.right * _speed * Time.deltaTime;
     }
    
     

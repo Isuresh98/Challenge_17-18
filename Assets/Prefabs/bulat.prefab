@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3872438062622396585}
   - component: {fileID: 2698838379310055162}
   - component: {fileID: 4793417750344517674}
-  - component: {fileID: 4470138182592698707}
+  - component: {fileID: 4147957773174472319}
   m_Layer: 0
   m_Name: bulat
   m_TagString: Bulat
@@ -99,7 +99,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0.038175754}
   serializedVersion: 2
   m_Radius: 0.4865035
---- !u!114 &4470138182592698707
+--- !u!114 &4147957773174472319
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
